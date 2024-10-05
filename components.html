@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/componentes.css">
+    
+</head>
+<body>
+    <header class="text-center">
+        <div class="container">
+            <h1 class="header-title">Componentes<br>Bootstrap 5</h1>
+            <p class="lead"></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <ul class="nav nav-tabs justify-content-center" id="componentNav" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="carousel-tab" data-bs-toggle="tab" data-bs-target="#carousel" type="button" role="tab">Carousel</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="dropdown-tab" data-bs-toggle="tab" data-bs-target="#dropdown" type="button" role="tab">Dropdown</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="modal-tab" data-bs-toggle="tab" data-bs-target="#modal" type="button" role="tab">Modal</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+               <div class="tab-pane fade show active" id="carousel" role="tabpanel">
+                    <div class="example-card animate-fade-in-up">
+                        <h2>Carousel</h2>
+                        <p>Un componente dinámico para mostrar contenido deslizante.</p>
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img/pasaje1.jpg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img/paisaje2.jpeg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img/paisaje3.jpg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="dropdown" role="tabpanel">
+                    <div class="example-card animate-fade-in-up">
+                        <h2>Dropdown</h2>
+                        <p>Menús desplegables.</p>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Abrir menú
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                                <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                                <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="modal" role="tabpanel">
+                    <div class="example-card animate-fade-in-up">
+                        <h2>Modal</h2>
+                        <p>Ventanas emergentes.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Abrir modal
+                        </button>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mt-4">
+                    <div class="col">
+                        <div class="example-card">
+                            <h2>4. Navbar</h2>
+                            <p>Una <strong>navbar</strong> permite a los usuarios navegar fácilmente por las diferentes secciones de tu sitio web.</p>
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Mi Sitio</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">Características</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">Contacto</a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                            </nav>
+                        </div>
+                        </div>
+            
+                          <div class="col">
+                                <div class="example-card">
+                                    <h2>5. Pagination</h2>
+                                    <p>La <strong>paginación</strong> es útil para dividir grandes cantidades de contenido en partes más pequeñas y manejables.</p>
+                                    <div id="pagination-content" class="alert alert-info">Selecciona una página.</div>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#" onclick="changeContent('Anterior')">Anterior</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" onclick="changeContent('1')">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" onclick="changeContent('2')">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" onclick="changeContent('3')">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" onclick="changeContent('Siguiente')">Siguiente</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Título del Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este es un ejemplo de modal con diseño moderno y minimalista.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-content">
+
+
+</div>
+      
+
+    <a href="#" class="back-to-home">
+        ← Volver al inicio
+    </a>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+        
+        function changeContent(page) {
+            const content = document.getElementById('pagination-content');
+            content.innerHTML = `Has seleccionado : ${page}`;
+        }
+
+       const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.example-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
