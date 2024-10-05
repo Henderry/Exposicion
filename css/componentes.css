@@ -9,7 +9,7 @@
         }
 
         body {
-            background-image: url('/img/armarios-azules-naranjas.jpg');
+            background-image: url('armarios-azules-naranjas.jpg');
             background-size: cover;
             background-position: center;
             color: var(--text-color);
